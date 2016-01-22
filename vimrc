@@ -48,6 +48,7 @@ set smarttab " something about tabstop/softtabstop
 set lazyredraw " Don't redraw while executing macros
 set magic " Regex in search
 set noerrorbells " No boop error sounds
+set vb t_vb=
 set encoding=utf8 " Always use utf8 encoding
 set colorcolumn=80
 set textwidth=500
