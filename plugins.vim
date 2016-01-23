@@ -14,6 +14,8 @@ if has("gui_running")
     Plugin 'Valloric/YouCompleteMe'
 endif
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
+Plugin 'chriskempson/base16-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'cespare/vim-toml'
 "Plugin 'airblade/vim-gitgutter'

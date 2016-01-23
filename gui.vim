@@ -1,7 +1,9 @@
 " Common GUI settings
 
 
-colorscheme solarized
+"colorscheme solarized
+"colorscheme molokai
+colorscheme base16-default
 set background=dark
 set guioptions=
 
