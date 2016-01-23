@@ -7,6 +7,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-dispatch'
 Plugin 'rust-lang/rust.vim'
 Plugin 'bling/vim-airline'
 if has("gui_running")
