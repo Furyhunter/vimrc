@@ -30,7 +30,7 @@ Mapping       | Description
 ,gc           | Open temp buffer to commit (`:wq` to finalize)
 ,\<Space\>    | Enable Ctrl-P search (can also use `C-p`)
 ,s(hjkl)      | Split window in direction (deciding vert/hori by motion)
-<C-w>(hjkl)   | Move to window in direction
+\<C-w\>(hjkl) | Move to window in direction
               | **nerdcommenter**
 ,c\<Space\>   | Toggle comment line
 ,cc           | Comment line/selection
