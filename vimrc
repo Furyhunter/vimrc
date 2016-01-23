@@ -3,26 +3,8 @@ set nocompatible
 filetype off
 set rtp+=$HOME/.vim/bundle/Vundle.vim
 
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-dispatch'
-Plugin 'rust-lang/rust.vim'
-Plugin 'bling/vim-airline'
-if has("gui_running")
-    Plugin 'Valloric/YouCompleteMe'
-endif
-Plugin 'scrooloose/nerdtree'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'cespare/vim-toml'
-"Plugin 'airblade/vim-gitgutter'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-shell'
-call vundle#end()
+" Build plugin list
+source $HOME/.vim/plugins.vim
 
 set shiftwidth=4 tabstop=8 softtabstop=4
 
@@ -55,6 +37,7 @@ set colorcolumn=80
 set textwidth=500
 set expandtab
 set smarttab
+set shortmess=c " Disables the completion messages with YCM, less obnoxious
 
 " Trailing whitespace indicators
 set list
@@ -67,41 +50,52 @@ if v:version > 703 || v:version == 703 && has("path541")
     set formatoptions+=j " Delete comment character when joining comment lines
 endif
 
-set shortmess=c " Disables the completion messages with YCM, less obnoxious
 
-
-let mapleader=","
-
+" Common GUI settings
 if has("gui_running")
-    colorscheme solarized
-    set background=dark
-    set guioptions=
+    source $HOME/.vim/gui.vim
 endif
 
+" Win32/Unixish specific settings
 if has("win32")
-    set wildignore+=*\\target\\*
-    set guifont=Lucida_Sans_Typewriter:h9:cANSI
+    source $HOME/.vim/win32.vim
 else
-    set wildignore+=*/target/*
+    source $HOME/.vim/unix.vim
+endif
+
+" Windows GUI specific settings
+if has("win32") && has("gui_running")
+    source $HOME/.vim/win32_gui.vim
+endif
+
+" Non-Windows (unixish) GUI specific settings
+if !has("win32") && has("gui_running")
+    source $HOME/.vim/unix_gui.vim
 endif
 
 let g:ctrlp_working_path_mode = 'raw'
-let g:ctrlp_custom_ignore = { 'dir': '\v[\/](.git|.cabal-sandbox|.svn|target)'}
+"let g:ctrlp_custom_ignore = { 'dir': '\v[\/](.git|.cabal-sandbox|.svn|target)'}
 
 let g:airline#extensions#tabline#enabled = 1
 
 let delimitMate_expand_cr=1
 
-" Redraw screen
-map <silent> <Leader>r :redraw!<CR>
+" Hotkeys
+
+" The <Leader> substitute character. Maybe prefer \, don't know
+let mapleader=","
+
+" Redraw screen (for ssh corruption, etc)
+map <silent> <Leader>rd :redraw!<CR>
 
 " Toggle nerdtree
 nnoremap <Leader>t :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen = 1
 
 " Buffer switching
-nnoremap <Leader>bn :bn<CR>
-nnoremap <Leader>bp :bp<CR>
+" Disabled -- these are not much more useful than using directly
+"nnoremap <Leader>bn :bn<CR>
+"nnoremap <Leader>bp :bp<CR>
 
 " Quicker OS clipboard copy/paste
 nmap <Leader>y "*y
@@ -110,10 +104,13 @@ nmap <Leader>d "*d
 vmap <Leader>d "*d
 nmap <Leader>p "*p
 vmap <Leader>p "*p
+nmap <Leader>P "*P
+vmap <Leader>P "*P
 nmap <Leader>x "*x
 vmap <Leader>x "*x
 
 " Graphical move up/down (even on wrapping lines)
+" May introduce performance issues.
 nnoremap j gj
 nnoremap k gk
 
@@ -124,14 +121,15 @@ nmap <Leader>sk :leftabove new<CR>
 nmap <Leader>sj :rightbelow new<CR>
 
 " Motions to windows
-nmap <Leader>wh <C-w>h
-nmap <Leader>wl <C-w>l
-nmap <Leader>wj <C-w>j
-nmap <Leader>wk <C-w>k
+" Disabled -- prefer C-w hjkl (is faster)
+"nmap <Leader>wh <C-w>h
+"nmap <Leader>wl <C-w>l
+"nmap <Leader>wj <C-w>j
+"nmap <Leader>wk <C-w>k
 
 " Git stuff
 nmap <Leader>gs :Gstatus<CR>
-nmap <Leader>gg :copen<CR>:GGrep
+"nmap <Leader>gg :copen<CR>:GGrep
 nmap <Leader>gd :Gdiff<CR>
 nmap <Leader>gb :Gblame<CR>
 nmap <Leader>ga :Git add %<CR>
@@ -143,6 +141,6 @@ nnoremap <silent> <Leader><space> :CtrlP<CR>
 "nnoremap * /\<<C-R>=expand('<cword>')<CR>\><CR>
 "nnoremap # ?\<<C-R>=expand('<cword>')<CR>\><CR>
 
-" Folding
+" Reload configuration
+nnoremap <Leader>rc :source $HOME/.vimrc<CR>
 
-autocmd! BufWritePost $HOME/.vim/vimrc :source $HOME/.vim/vimrc
