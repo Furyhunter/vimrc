@@ -1,6 +1,7 @@
 " Plugin list
 " Source _early_ in full configuration parsing
 
+
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
@@ -24,4 +25,5 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-shell'
+Plugin 'junegunn/vim-easy-align'
 call vundle#end()

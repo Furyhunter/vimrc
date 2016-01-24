@@ -11,33 +11,34 @@ set shiftwidth=4 tabstop=8 softtabstop=4
 filetype plugin indent on
 syntax on
 
-set mouse=a " Enable all mouse buttons
-set autoindent " Track previous line's indentation on newline
-set smartindent " Smart autoindentation
-set laststatus=2 " Always show 2 lines of status bar
-set backspace=2 " Allow backspace anything in insert mode
-set number " Show line number column
-set hidden " Allow modified buffers to be hidden without error
-set ignorecase " Case insensitive search
-set smartcase " Use case sensitivity if an uppercase character is used
-set incsearch " Immediately move to first search target result while typing
-set showmatch " Highlight matching brace/paren/quote
+set mouse=a       " Enable all mouse buttons
+set autoindent    " Track previous line's indentation on newline
+set smartindent   " Smart autoindentation
+set laststatus=2  " Always show 2 lines of status bar
+set backspace=2   " Allow backspace anything in insert mode
+set number        " Show line number column
+set hidden        " Allow modified buffers to be hidden without error
+set ignorecase    " Case insensitive search
+set smartcase     " Use case sensitivity if an uppercase character is used
+set incsearch     " Immediately move to first search target result while typing
+set showmatch     " Highlight matching brace/paren/quote
 set mat=2
-set scrolloff=7 " Show at least x lines on top/bottom of caret
-set wildmenu " Shows :cmd completions in new window above entry
+set scrolloff=7   " Show at least x lines on top/bottom of caret
+set wildmenu      " Shows :cmd completions in new window above entry
 set wildmode=list:longest,full
-set autoread " Always read buffers modified outside of Vim
-set smarttab " something about tabstop/softtabstop
-set lazyredraw " Don't redraw while executing macros
-set magic " Regex in search
-set noerrorbells " No boop error sounds
-set vb t_vb=
+set autoread      " Always read buffers modified outside of Vim
+set smarttab      " something about tabstop/softtabstop
+set lazyredraw    " Don't redraw while executing macros
+set magic         " Regex in search
+set noerrorbells  " No boop error sounds
+set vb
+set t_vb=
 set encoding=utf8 " Always use utf8 encoding
 set colorcolumn=80
 set textwidth=500
 set expandtab
 set smarttab
-set shortmess=c " Disables the completion messages with YCM, less obnoxious
+set shortmess=c   " Disables the completion messages with YCM, less obnoxious
 
 " Trailing whitespace indicators
 set list
@@ -113,6 +114,10 @@ vmap <Leader>x "*x
 " May introduce performance issues.
 nnoremap j gj
 nnoremap k gk
+
+" Easy Align
+nmap ga <Plug>(EasyAlign)
+vmap ga <Plug>(EasyAlign)
 
 " Creating new windows w/ pseudo-motions
 nmap <Leader>sh :leftabove vnew<CR>
