@@ -2,11 +2,11 @@
 
 It's pretty complicated. Organization should be pretty self explanatory.
 
-Depends on Vundle, make sure to clone it into `~/.vim/bundle/Vundle.vim` before
-you open Vim otherwise it will whine a lot.
+Depends on Vundle, make sure to clone it into `~/.vim/bundle/Vundle.vim`
+before you open Vim otherwise it will whine a lot.
 
-Primarily designed for GUI use (GVim, MacVim). Some features are disabled under
-terminal mode to reduce performance issues when using through ssh.
+Primarily designed for GUI use (GVim, MacVim). Some features are disabled
+under terminal mode to reduce performance issues when using through ssh.
 
 # Mapping Cheatsheet
 
@@ -14,7 +14,7 @@ This table is non-exhaustive, see plugins for more info
 
 ## Normal mode
 Mapping       | Description
-------------- | ---------------------------------------------------------------
+------------- | --------------------------------------------------------------
               | **mine**
 ,y            | Yank to clipboard (motion in nmode, selection in vmode)
 ,d            | Delete to clipboard (linewise)

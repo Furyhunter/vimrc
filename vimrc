@@ -148,3 +148,5 @@ nnoremap <silent> <Leader><space> :CtrlP<CR>
 " Reload configuration
 nnoremap <Leader>rc :source $HOME/.vimrc<CR>
 
+" Load filetype autocmds
+source $HOME/.vim/autocmd.vim
