@@ -94,9 +94,8 @@ nnoremap <Leader>t :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen = 1
 
 " Buffer switching
-" Disabled -- these are not much more useful than using directly
-"nnoremap <Leader>bn :bn<CR>
-"nnoremap <Leader>bp :bp<CR>
+nnoremap <Leader>bn :bn<CR>
+nnoremap <Leader>bp :bp<CR>
 
 " Quicker OS clipboard copy/paste
 nmap <Leader>y "*y

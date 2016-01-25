@@ -31,6 +31,8 @@ Mapping       | Description
 ,\<Space\>    | Enable Ctrl-P search (can also use `C-p`)
 ,s(hjkl)      | Split window in direction (deciding vert/hori by motion)
 \<C-w\>(hjkl) | Move to window in direction
+,bn           | Next buffer
+,bp           | Previous buffer
               | **nerdcommenter**
 ,c\<Space\>   | Toggle comment line
 ,cc           | Comment line/selection
