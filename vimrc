@@ -22,7 +22,7 @@ set ignorecase    " Case insensitive search
 set smartcase     " Use case sensitivity if an uppercase character is used
 set incsearch     " Immediately move to first search target result while typing
 set showmatch     " Highlight matching brace/paren/quote
-set mat=2
+set mat=0
 set scrolloff=7   " Show at least x lines on top/bottom of caret
 set wildmenu      " Shows :cmd completions in new window above entry
 set wildmode=list:longest,full
