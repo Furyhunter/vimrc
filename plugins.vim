@@ -8,7 +8,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-dispatch'
 Plugin 'rust-lang/rust.vim'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 if has("gui_running")
     " We don't want this running under term, since it takes a fair amount of
     " time to initialize.
