@@ -53,7 +53,7 @@ endif
 
 
 " Common GUI settings
-if has("gui_running")
+if has("gui_running") || has("nvim")
     source $HOME/.vim/gui.vim
 endif
 
@@ -65,12 +65,12 @@ else
 endif
 
 " Windows GUI specific settings
-if has("win32") && has("gui_running")
+if has("win32") && (has("gui_running") || has("nvim"))
     source $HOME/.vim/win32_gui.vim
 endif
 
 " Non-Windows (unixish) GUI specific settings
-if !has("win32") && has("gui_running")
+if !has("win32") && (has("gui_running") || has("nvim"))
     source $HOME/.vim/unix_gui.vim
 endif
 
