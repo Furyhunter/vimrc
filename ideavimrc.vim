@@ -13,16 +13,16 @@ set ignorecase
 set smartcase
 
 " Quicker OS clipboard copy/paste
-nnoremap <Leader>y "*y
-vnoremap <Leader>y "*y
-nnoremap <Leader>d "*d
-vnoremap <Leader>d "*d
-nnoremap <Leader>p "*p
-vnoremap <Leader>p "*p
-nnoremap <Leader>P "*P
-vnoremap <Leader>P "*P
-nnoremap <Leader>x "*x
-vnoremap <Leader>x "*x
+"nnoremap <Leader>y "*y
+"vnoremap <Leader>y "*y
+"nnoremap <Leader>d "*d
+"vnoremap <Leader>d "*d
+"nnoremap <Leader>p "*p
+"vnoremap <Leader>p "*p
+"nnoremap <Leader>P "*P
+"vnoremap <Leader>P "*P
+"nnoremap <Leader>x "*x
+"vnoremap <Leader>x "*x
 
 " Mimic pseudo-motion splits
 " Not quite the same, it doesn't make a new buffer.
