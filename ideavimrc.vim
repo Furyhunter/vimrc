@@ -5,6 +5,12 @@
 " note: this is only in dev atm, not released
 set surround
 
+set number
+set relativenumber
+set incsearch
+set ignorecase
+set smartcase
+
 " Quicker OS clipboard copy/paste
 nnoremap <Leader>y "*y
 vnoremap <Leader>y "*y
