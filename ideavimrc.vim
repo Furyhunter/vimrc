@@ -67,3 +67,4 @@ nnoremap ,ga :action Git.Add<CR>
 nnoremap ,gc :action ChangesView.Commit<CR>
 nnoremap ,gb :action Git.Branches<CR>
 nnoremap ,gd :action Compare.SameVersion<CR>
+nnoremap ,gr :action Vcs.RollbackChangedLines<CR>
