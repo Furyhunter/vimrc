@@ -78,4 +78,9 @@ cs(}          | Replace () surroundings with {} (without spaces)
 ysiw]         | Add [] around identifier/word (without spaces)
 ds"           | Remove " surroundings
 lots          | There are lots of bindings in surround, check out the manual
+              | **Folding** (standard vim)
+za            | Toggle fold
+zc            | Close fold
+zo            | Open fold
+zA/C/O        | Do the above at all folds on current level.
 
