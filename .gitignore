@@ -3,3 +3,6 @@ bundle
 *.swp
 *~
 *.pyc
+
+# Ignore eclim local installation.
+eclim

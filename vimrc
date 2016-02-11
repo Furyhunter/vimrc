@@ -3,8 +3,15 @@ set nocompatible
 filetype off
 set rtp+=$HOME/.vim/bundle/Vundle.vim
 
-" Build plugin list
+" Load vundle plugins
 source $HOME/.vim/plugins.vim
+
+" Conditionally load eclim plugin, if it's available.
+" NOTE: You must install eclim separately, into the eclim subdirectory
+" in your vimfiles. This is why it's a conditional variable.
+if g:idola_conf_eclim == 1
+  set rtp+=$HOME/.vim/eclim
+endif
 
 set shiftwidth=4 tabstop=8 softtabstop=4
 
