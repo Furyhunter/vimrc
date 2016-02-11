@@ -13,8 +13,6 @@ augroup FT_PREFS
   "  \ "%C%f:%l %m," .
   "  \ "%-Z%.%#"
   autocmd FileType scala setlocal tabstop=8 shiftwidth=2 softtabstop=2
-  " Rationale: eclim semantic complete is still a bit laggy b/c omnifunc
-  autocmd FileType scala let g:ycm_auto_trigger = 0
 augroup END
 
 function! CargoCheck()

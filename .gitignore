@@ -4,5 +4,3 @@ bundle
 *~
 *.pyc
 
-# Ignore eclim local installation.
-eclim

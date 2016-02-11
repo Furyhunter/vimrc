@@ -6,13 +6,15 @@ set rtp+=$HOME/.vim/bundle/Vundle.vim
 " Load vundle plugins
 source $HOME/.vim/plugins.vim
 
-" Conditionally load eclim plugin, if it's available.
-" NOTE: You must install eclim separately, into the eclim subdirectory
-" in your vimfiles. This is why it's a conditional variable.
-if g:idola_conf_eclim == 1
-  set rtp+=$HOME/.vim/eclim
-  let g:EclimCompletionMethod = 'omnifunc'
-endif
+" Disabled -- it's just not practical in normal Vim. Performance is too janky,
+" missing valuable features.
+"" Conditionally load eclim plugin, if it's available.
+"" NOTE: You must install eclim separately, into the eclim subdirectory
+"" in your vimfiles. This is why it's a conditional variable.
+"if g:idola_conf_eclim == 1
+  "set rtp+=$HOME/.vim/eclim
+  "let g:EclimCompletionMethod = 'omnifunc'
+"endif
 
 set shiftwidth=4 tabstop=8 softtabstop=4
 
