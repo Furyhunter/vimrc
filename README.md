@@ -83,8 +83,8 @@ zc            | Close fold
 zo            | Open fold
 zA/C/O        | Do the above at all folds on current level.
               | **Vanilla Motions**
-<C-(ud)>      | Half-screen Up or Down (up, down)
-<C-(fb)>      | Full-screen Up or Down (forward, back)
+\<C-(ud)\>      | Half-screen Up or Down (up, down)
+\<C-(fb)\>      | Full-screen Up or Down (forward, back)
 H             | Home (equivalent to gg)
 M             | Middle
 L             | Last (equivalent to G without line number)
