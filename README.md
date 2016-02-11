@@ -44,7 +44,6 @@ to move to it until its GUI support matures.
 
 This table is non-exhaustive, see plugins for more info
 
-## Normal mode
 Mapping       | Description
 ------------- | --------------------------------------------------------------
               | **mine**
@@ -83,4 +82,23 @@ za            | Toggle fold
 zc            | Close fold
 zo            | Open fold
 zA/C/O        | Do the above at all folds on current level.
-
+              | **Vanilla Motions**
+<C-(ud)>      | Half-screen Up or Down (up, down)
+<C-(fb)>      | Full-screen Up or Down (forward, back)
+H             | Home (equivalent to gg)
+M             | Middle
+L             | Last (equivalent to G without line number)
+( )           | Next/previous sentence (`2)` is 2 sentences forward)
+{ }           | Next/previous paragraph
+%             | Next _related item_ (context-specific)
+\`\`          | Back to _last position_ (last motion?)
+f{char}       | Move to next occurrence of {char} in current line.
+F{char}       | Move to previous occurrence of {char} in current line.
+(tT){char}    | Move _before_ next/prev occurrence of {char}
+;             | Repeat last ftFT motion
+              | **Vanilla Semantic Selections**
+vip           | Enter Visual, select current paragraph
+gq            | Reformat selection (V), visual motion (N), to textwidth
+gqip          | Reformat paragraph (N)
+vipgq         | Reformat paragraph (V)
+=             | Re-indent selection (V), visual motion (N)
