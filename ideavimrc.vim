@@ -5,6 +5,7 @@
 " note: this is only in dev atm, not released
 set surround
 
+" some of these aren't in 0.44...
 set number
 set relativenumber
 set incsearch
@@ -48,7 +49,18 @@ nnoremap ,io :action OverrideMethods<CR>
 nnoremap ,ib :action CompileDirty<CR>
 nnoremap ,id :action Debug<CR>
 nnoremap ,ir :action Run<CR>
+nnoremap ,icr :action RunToCursor<CR>
 nnoremap ,ip :action ChooseRunConfiguration<CR>
+nnoremap ,it :action SurroundWith<CR>
+nnoremap ,igd :action GotoDeclaration<CR>
+
+" Scala bindings
+nnoremap ,t :action Scala.TypeInfo<CR>
+nnoremap ,sds :action Scala.CreateScalaDocStub<CR>
+nnoremap ,sco :action Scala.GenerateCompanionObject<CR>
+nnoremap ,oi :action OptimizeImports<CR>
+nnoremap ,qi :action QuickImplementations<CR>
+nnoremap ,qd :action QuickJavaDoc<CR>
 
 " IDEA Git bindings
 nnoremap ,ga :action Git.Add<CR>
