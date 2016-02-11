@@ -11,6 +11,7 @@ source $HOME/.vim/plugins.vim
 " in your vimfiles. This is why it's a conditional variable.
 if g:idola_conf_eclim == 1
   set rtp+=$HOME/.vim/eclim
+  let g:EclimCompletionMethod = 'omnifunc'
 endif
 
 set shiftwidth=4 tabstop=8 softtabstop=4
