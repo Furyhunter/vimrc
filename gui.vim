@@ -3,7 +3,7 @@
 
 "colorscheme solarized
 "colorscheme molokai
-colorscheme base16-default
+colorscheme base16-default-dark
 set background=dark
 set guioptions=
 
