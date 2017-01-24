@@ -32,8 +32,9 @@ nnoremap ,sj <C-W>s
 nnoremap ,sk <C-W>s<C-W>k
 
 " Simulate commenting commands
-nnoremap ,c<Space> :action CommentByLineComment<CR>
-vnoremap ,c<Space> :action CommentByLineComment<CR>
+nnoremap gcc :action CommentByLineComment<CR>
+nnoremap gcgc :action CommentByLineComment<CR>
+vnoremap gc :action CommentByBlockComment<CR>
 
 " Reload ideavimrc
 nnoremap ,rc :source ~/.ideavimrc<CR>

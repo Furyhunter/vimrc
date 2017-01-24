@@ -64,11 +64,11 @@ Mapping       | Description
 \<C-w\>(hjkl) | Move to window in direction
 ,bn           | Next buffer
 ,bp           | Previous buffer
-              | **nerdcommenter**
-,c\<Space\>   | Toggle comment line
-,cc           | Comment line/selection
-,cu           | Uncomment line/selection
-,ca           | Switches comment delimiter (`//` and `/**/` for example)
+              | **vim-commentary**
+gcc           | comment out line (`4gcc` for 4 lines)
+gc            | comment out motion (`gcap` for paragraph)
+              | _command Commentary (:7,17Commentary)_
+              | _:global invoke (:g/TODO/Commentary)_
               | **vim-surround**
 cs'"          | Replace ' surroundings with "
 cs"'          | Replace " surroundings with ' (so on, so forth...)
