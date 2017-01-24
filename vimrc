@@ -129,10 +129,10 @@ nmap ga <Plug>(EasyAlign)
 vmap ga <Plug>(EasyAlign)
 
 " Creating new windows w/ pseudo-motions
-nmap <Leader>sh :leftabove vnew<CR>
-nmap <Leader>sl :rightbelow vnew<CR>
-nmap <Leader>sk :leftabove new<CR>
-nmap <Leader>sj :rightbelow new<CR>
+nmap <Leader>sh :leftabove vsplit<CR>
+nmap <Leader>sl :rightbelow vsplit<CR>
+nmap <Leader>sk :leftabove split<CR>
+nmap <Leader>sj :rightbelow split<CR>
 
 " Motions to windows
 " Disabled -- prefer C-w hjkl (is faster)
