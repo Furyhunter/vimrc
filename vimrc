@@ -134,6 +134,12 @@ nmap <Leader>sl :rightbelow vsplit<CR>
 nmap <Leader>sk :leftabove split<CR>
 nmap <Leader>sj :rightbelow split<CR>
 
+" Faster moves.
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " Motions to windows
 " Disabled -- prefer C-w hjkl (is faster)
 "nmap <Leader>wh <C-w>h
