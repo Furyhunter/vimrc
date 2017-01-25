@@ -2,7 +2,7 @@
 " Source _early_ in full configuration parsing
 
 
-call vundle#begin()
+call vundle#begin('$HOME/.vim/.vundle-bundle')
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'dag/vim-fish'
 Plugin 'tpope/vim-fugitive'

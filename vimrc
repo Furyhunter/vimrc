@@ -1,7 +1,7 @@
 set nocompatible
 
 filetype off
-set rtp+=$HOME/.vim/bundle/Vundle.vim
+set rtp+=$HOME/.vim/.vundle-bundle/Vundle.vim
 
 " Load vundle plugins
 source $HOME/.vim/plugins.vim
@@ -86,7 +86,7 @@ endif
 "let g:ctrlp_working_path_mode = 'raw'
 "let g:ctrlp_custom_ignore = { 'dir': '\v[\/](.git|.cabal-sandbox|.svn|target)'}
 let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/](\.git|\.hg|\.svn|\.cabal-sandbox|node_modules|target|bundle)$'
+  \ 'dir': '\v[\/](\.git|\.hg|\.svn|\.cabal-sandbox|node_modules|target|\.vundle-bundle)$'
   \ }
 
 let g:airline#extensions#tabline#enabled = 0
