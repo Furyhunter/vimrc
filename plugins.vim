@@ -29,4 +29,5 @@ Plugin 'scrooloose/syntastic'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-shell'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'neomake/neomake'
 call vundle#end()
