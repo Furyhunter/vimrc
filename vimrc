@@ -47,7 +47,6 @@ set encoding=utf8 " Always use utf8 encoding
 set colorcolumn=80
 set textwidth=500
 set expandtab
-set smarttab
 set shortmess=c   " Disables the completion messages with YCM, less obnoxious
 
 " Trailing whitespace indicators
@@ -90,7 +89,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir': '\v[\/](\.git|\.hg|\.svn|\.cabal-sandbox|node_modules|target|bundle)$'
   \ }
 
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 
 let delimitMate_expand_cr=1
 
