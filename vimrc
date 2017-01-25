@@ -84,8 +84,11 @@ if !has("win32") && (has("gui_running") || has("nvim"))
     source $HOME/.vim/unix_gui.vim
 endif
 
-let g:ctrlp_working_path_mode = 'raw'
+"let g:ctrlp_working_path_mode = 'raw'
 "let g:ctrlp_custom_ignore = { 'dir': '\v[\/](.git|.cabal-sandbox|.svn|target)'}
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\v[\/](\.git|\.hg|\.svn|\.cabal-sandbox|node_modules|target|bundle)$'
+  \ }
 
 let g:airline#extensions#tabline#enabled = 1
 
