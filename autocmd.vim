@@ -4,8 +4,9 @@ augroup FT_PREFS
   autocmd!
   autocmd FileType markdown,text,txt setlocal tw=78 linebreak nolist colorcolumn=79
   autocmd FileType vim setlocal tabstop=8 shiftwidth=2 softtabstop=2
-  autocmd FileType rust nmap <buffer> <Leader>bc :call CargoCheck()<CR>
-  autocmd FileType rust nmap <buffer> <Leader>bb :call CargoBuild()<CR>
+  autocmd FileType moon setlocal tabstop=8 shiftwidth=2 softtabstop=2
+  " autocmd FileType rust nmap <buffer> <Leader>bc :call CargoCheck()<CR>
+  " autocmd FileType rust nmap <buffer> <Leader>bb :call CargoBuild()<CR>
   "autocmd FileType rust
   "  \ let &l:errorformat = "" .
   "  \ "%E%f:%l:%c: %\d%#:%\d%# %.%\{-}error:%.%\{-} %m," .

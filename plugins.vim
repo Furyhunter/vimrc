@@ -30,4 +30,6 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-shell'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'neomake/neomake'
+Plugin 'leafo/moonscript-vim'
+Plugin 'editorconfig/editorconfig-vim'
 call vundle#end()
