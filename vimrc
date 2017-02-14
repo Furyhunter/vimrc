@@ -101,9 +101,11 @@ let mapleader=","
 " Redraw screen (for ssh corruption, etc)
 map <silent> <Leader>rd :redraw!<CR>
 
-" Toggle nerdtree
-nnoremap <Leader>t :NERDTreeToggle<CR>
-let NERDTreeQuitOnOpen = 1
+" Toggle ~~nerdtree~~ vimfiler
+nnoremap <Leader>t :VimFilerExplorer<CR>
+nnoremap <C-T> :VimFilerExplorer<CR>
+"let NERDTreeQuitOnOpen = 1
+let g:vimfiler_as_default_explorer = 1
 
 " Buffer switching
 nnoremap <Leader>bn :bn<CR>
@@ -158,7 +160,8 @@ nmap <Leader>ga :Git add %<CR>
 nmap <Leader>gc :Gcommit<CR>
 
 " Ctrl-P hotkey
-nnoremap <silent> <Leader><space> :CtrlP<CR>
+"nnoremap <silent> <Leader><space> :Unite -start-insert file buffer<CR>
+nnoremap <C-P> :Unite -start-insert file buffer<CR>
 
 "nnoremap * /\<<C-R>=expand('<cword>')<CR>\><CR>
 "nnoremap # ?\<<C-R>=expand('<cword>')<CR>\><CR>
