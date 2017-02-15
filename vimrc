@@ -102,8 +102,8 @@ let mapleader=","
 map <silent> <Leader>rd :redraw!<CR>
 
 " Toggle ~~nerdtree~~ vimfiler
-nnoremap <Leader>t :VimFilerExplorer<CR>
-nnoremap <C-T> :VimFilerExplorer<CR>
+nnoremap <Leader>t :VimFiler -explorer -force-quit<CR>
+nnoremap <C-T> :VimFiler -explorer -force-quit<CR>
 "let NERDTreeQuitOnOpen = 1
 let g:vimfiler_as_default_explorer = 1
 
@@ -161,7 +161,7 @@ nmap <Leader>gc :Gcommit<CR>
 
 " Ctrl-P hotkey
 "nnoremap <silent> <Leader><space> :Unite -start-insert file buffer<CR>
-nnoremap <C-P> :Unite -start-insert file buffer<CR>
+nnoremap <C-p> :Unite -start-insert file buffer<CR>
 
 "nnoremap * /\<<C-R>=expand('<cword>')<CR>\><CR>
 "nnoremap # ?\<<C-R>=expand('<cword>')<CR>\><CR>

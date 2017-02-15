@@ -37,4 +37,5 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'leshill/vim-json'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimfiler.vim'
+Plugin 'Shougo/vimproc.vim'
 call vundle#end()
