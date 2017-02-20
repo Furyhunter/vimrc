@@ -37,11 +37,11 @@ For ycm completions, close vim, and run:
     cd ~/.vim/bundle/YouCompleteMe
     ./install.py [options] <-- See the YouCompleteMe manual for instructions
 
-~For eclim support, run the eclim install process and point its vimfiles to
+~~For eclim support, run the eclim install process and point its vimfiles to
 `~/.vim/eclim` (**not `~/.vim`**). Then, add `let g:idola_conf_eclim = 1`
 before the `source` of `~/.vim/vimrc` in your local configuration. As with
 typical eclim procedure, you need to run the `eclimd` before you can use it;
-that instance should be shared between all Vim sessions.~ eclim support is
+that instance should be shared between all Vim sessions.~~ eclim support is
 disabled due to performance issues.
 
 This is largely incompatible with NeoVim at the moment, I don't really intend
