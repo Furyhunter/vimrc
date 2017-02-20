@@ -40,6 +40,32 @@ that instance should be shared between all Vim sessions.
 This is largely incompatible with NeoVim at the moment, I don't really intend
 to move to it until its GUI support matures.
 
+### Setting up Unite Ctrl-P file searching
+
+Install `ag` and the vimproc plugin's native binary. _(How do I do this on
+Windows?)_
+
+In local configuration, set the following:
+
+    let g:unite_source_rec_async_command =
+      \ ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
+
+If `ag` isn't in the `PATH` when vim starts, you should give an absolute path
+to it instead. 
+
+### Setting a font for GUI only
+
+    if has('gui')
+      set guifont=Monaco\ for\ Powerline:h12
+      let g:airline_powerline_fonts=1
+    endif
+
+### Using sh when login shell is set to fish
+
+    if &shell =~# 'fish$'
+        set shell=sh
+    endif
+
 # Mapping Cheatsheet
 
 This table is non-exhaustive, see plugins for more info
@@ -59,11 +85,13 @@ Mapping       | Description
 ,gb           | Git blame the current buffer and line (`:q` to return)
 ,ga           | Add the current file to staging (`git add`)
 ,gc           | Open temp buffer to commit (`:wq` to finalize)
-,\<Space\>    | Enable Ctrl-P search (can also use `C-p`)
 ,s(hjkl)      | Split window in direction (deciding vert/hori by motion)
-\<C-w\>(hjkl) | Move to window in direction
+\<C-(hjkl)\>  | Move to window in direction
 ,bn           | Next buffer
 ,bp           | Previous buffer
+              | **Unite.vim**
+\<C-p\>       | Unite.vim file and buffer fuzzy search
+Esc           | Unite.vim buffer quick jump (only in normal mode)
               | **vim-commentary**
 gcc           | comment out line (`4gcc` for 4 lines)
 gc            | comment out motion (`gcap` for paragraph)
