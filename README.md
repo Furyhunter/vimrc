@@ -12,30 +12,37 @@ under terminal mode to reduce performance issues when using through ssh.
 
 Make sure you have Python2 available, and Python2 support in your Vim.
 
+Either run the included `setup.sh`,
+
+    ./setup.sh
+
 Clone this repository (or your own) as your `~/.vim`, then:
 
-    mkdir -p ~/.vim/bundle
-    git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vim
+- Run the included `setup.sh`
+- Source the top level vimrc locally:
+
     echo "source ~/.vim/vimrc" >> ~/.vimrc
 
 `~/.vimrc` will act as your deployment-local configuration. You need to source
 the repo `vimrc` here to enable the global config. Configure your font and
-whatnot here as well.
+whatnot here as well (Why? Mainly for Windows tweaks, since several binaries
+have to be installed manually for this to work).
 
 Open up graphical Vim (gvim, mvim) and run
 
     :PluginInstall
 
-Close vim, and run:
+For ycm completions, close vim, and run:
 
     cd ~/.vim/bundle/YouCompleteMe
     ./install.py [options] <-- See the YouCompleteMe manual for instructions
 
-For eclim support, run the eclim install process and point its vimfiles to
+~For eclim support, run the eclim install process and point its vimfiles to
 `~/.vim/eclim` (**not `~/.vim`**). Then, add `let g:idola_conf_eclim = 1`
 before the `source` of `~/.vim/vimrc` in your local configuration. As with
 typical eclim procedure, you need to run the `eclimd` before you can use it;
-that instance should be shared between all Vim sessions.
+that instance should be shared between all Vim sessions.~ eclim support is
+disabled due to performance issues.
 
 This is largely incompatible with NeoVim at the moment, I don't really intend
 to move to it until its GUI support matures.
@@ -43,7 +50,7 @@ to move to it until its GUI support matures.
 ### Setting up Unite Ctrl-P file searching
 
 Install `ag` and the vimproc plugin's native binary. _(How do I do this on
-Windows?)_
+Windows? Precompiled binary?)_
 
 In local configuration, set the following:
 
