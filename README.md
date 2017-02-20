@@ -1,6 +1,6 @@
 # My Vimrc
 
-It's pretty complicated. Organization should be pretty self explanatory.
+It's pretty complicated. Organization should be self explanatory though.
 
 Depends on Vundle, make sure to clone it into `~/.vim/bundle/Vundle.vim`
 before you open Vim otherwise it will whine a lot.
