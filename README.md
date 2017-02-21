@@ -58,7 +58,7 @@ In local configuration, set the following:
       \ ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
 
 If `ag` isn't in the `PATH` when vim starts, you should give an absolute path
-to it instead. 
+to it instead.
 
 ### Setting a font for GUI only
 
@@ -97,8 +97,8 @@ Mapping       | Description
 ,bn           | Next buffer
 ,bp           | Previous buffer
               | **Unite.vim**
-\<C-p\>       | Unite.vim file and buffer fuzzy search
-Esc           | Unite.vim buffer quick jump (only in normal mode)
+\<C-p\>       | Unite.vim file fuzzy search
+\<C-o\>       | Unite.vim buffer quick match
               | **vim-commentary**
 gcc           | comment out line (`4gcc` for 4 lines)
 gc            | comment out motion (`gcap` for paragraph)

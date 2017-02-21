@@ -162,7 +162,9 @@ nmap <Leader>gc :Gcommit<CR>
 " Ctrl-P hotkey
 "nnoremap <silent> <Leader><space> :Unite -start-insert file buffer<CR>
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <C-p> :Unite -toggle -start-insert file_rec/async buffer<CR>
+call unite#filters#sorter_default#use(['sorter_selecta'])
+nnoremap <C-p> :Unite -toggle -start-insert file_rec/async<CR>
+nnoremap <C-o> :Unite -toggle -quick-match buffer<CR>
 
 "nnoremap * /\<<C-R>=expand('<cword>')<CR>\><CR>
 "nnoremap # ?\<<C-R>=expand('<cword>')<CR>\><CR>
