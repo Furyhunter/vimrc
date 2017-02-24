@@ -1,12 +1,13 @@
-# My Vimrc
+# eidolon's vimrc
 
 It's pretty complicated. Organization should be self explanatory though.
 
 Depends on Vundle, make sure to clone it into `~/.vim/bundle/Vundle.vim`
 before you open Vim otherwise it will whine a lot.
 
-Primarily designed for GUI use (GVim, MacVim). Some features are disabled
-under terminal mode to reduce performance issues when using through ssh.
+Primarily designed for GUI use (GVim, MacVim). Some features are
+disabled under terminal mode to reduce performance issues when using
+through ssh.
 
 # Installation
 
@@ -23,10 +24,10 @@ Clone this repository (or your own) as your `~/.vim`, then:
 
     echo "source ~/.vim/vimrc" >> ~/.vimrc
 
-`~/.vimrc` will act as your deployment-local configuration. You need to source
-the repo `vimrc` here to enable the global config. Configure your font and
-whatnot here as well (Why? Mainly for Windows tweaks, since several binaries
-have to be installed manually for this to work).
+`~/.vimrc` will act as your deployment-local configuration. You need to
+source the repo `vimrc` here to enable the global config. Configure your
+font and whatnot here as well (Why? Mainly for Windows tweaks, since
+several binaries have to be installed manually for this to work).
 
 Open up graphical Vim (gvim, mvim) and run
 
@@ -34,51 +35,49 @@ Open up graphical Vim (gvim, mvim) and run
 
 For ycm completions, close vim, and run:
 
-    cd ~/.vim/bundle/YouCompleteMe
-    ./install.py [options] <-- See the YouCompleteMe manual for instructions
+    cd ~/.vim/bundle/YouCompleteMe ./install.py [options] <-- See the
+    YouCompleteMe manual for instructions
 
-~~For eclim support, run the eclim install process and point its vimfiles to
-`~/.vim/eclim` (**not `~/.vim`**). Then, add `let g:idola_conf_eclim = 1`
-before the `source` of `~/.vim/vimrc` in your local configuration. As with
-typical eclim procedure, you need to run the `eclimd` before you can use it;
-that instance should be shared between all Vim sessions.~~ eclim support is
-disabled due to performance issues.
+~~For eclim support, run the eclim install process and point its
+vimfiles to `~/.vim/eclim` (**not `~/.vim`**). Then, add `let
+g:idola_conf_eclim = 1` before the `source` of `~/.vim/vimrc` in your
+local configuration. As with typical eclim procedure, you need to run
+the `eclimd` before you can use it; that instance should be shared
+between all Vim sessions.~~ eclim support is disabled due to performance
+issues.
 
-This is largely incompatible with NeoVim at the moment, I don't really intend
-to move to it until its GUI support matures.
+This is largely incompatible with NeoVim at the moment, I don't really
+intend to move to it until its GUI support matures.
 
 ### Setting up Unite Ctrl-P file searching
 
-Install `ag` and the vimproc plugin's native binary. _(How do I do this on
-Windows? Precompiled binary?)_
+Install `ag` and the vimproc plugin's native binary. _(How do I do this
+on Windows? Precompiled binary?)_
 
 In local configuration, set the following:
 
-    let g:unite_source_rec_async_command =
-      \ ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
+    let g:unite_source_rec_async_command = \ ['ag', '--follow',
+    '--nocolor', '--nogroup', '--hidden', '-g', '']
 
-If `ag` isn't in the `PATH` when vim starts, you should give an absolute path
-to it instead.
+If `ag` isn't in the `PATH` when vim starts, you should give an absolute
+path to it instead.
 
 ### Setting a font for GUI only
 
-    if has('gui')
-      set guifont=Monaco\ for\ Powerline:h12
-      let g:airline_powerline_fonts=1
-    endif
+    if has('gui') set guifont=Monaco\ for\ Powerline:h12 let
+        g:airline_powerline_fonts=1 endif
 
 ### Using sh when login shell is set to fish
 
-    if &shell =~# 'fish$'
-        set shell=sh
-    endif
+This configuration will automatically use `/bin/bash` per sensible.vim
+whenever fish is set to the shell and an old version of vim is in use.
 
 # Mapping Cheatsheet
 
 This table is non-exhaustive, see plugins for more info
 
 Mapping       | Description
-------------- | --------------------------------------------------------------
+------------- | -------------------------------------------------------
               | **mine**
 ,y            | Yank to clipboard (motion in nmode, selection in vmode)
 ,d            | Delete to clipboard (linewise)
@@ -118,8 +117,8 @@ zc            | Close fold
 zo            | Open fold
 zA/C/O        | Do the above at all folds on current level.
               | **Vanilla Motions**
-\<C-(ud)\>      | Half-screen Up or Down (up, down)
-\<C-(fb)\>      | Full-screen Up or Down (forward, back)
+\<C-(ud)\>    | Half-screen Up or Down (up, down)
+\<C-(fb)\>    | Full-screen Up or Down (forward, back)
 H             | Home (equivalent to gg)
 M             | Middle
 L             | Last (equivalent to G without line number)

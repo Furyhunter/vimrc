@@ -44,7 +44,7 @@ set noerrorbells  " No boop error sounds
 set vb
 set t_vb=
 set encoding=utf8 " Always use utf8 encoding
-set colorcolumn=80
+set colorcolumn=72
 set textwidth=500
 set expandtab
 set shortmess=c   " Disables the completion messages with YCM, less obnoxious
@@ -53,6 +53,12 @@ set shortmess=c   " Disables the completion messages with YCM, less obnoxious
 set list
 if &listchars ==# 'eol:$'
     set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+endif
+
+" Fish shell doesn't work on older vim versions
+if &shell =~# 'fish$'
+      \ && (v:version < 704 || v:version == 704 && !has('patch276'))
+  set shell=/bin/bash
 endif
 
 
