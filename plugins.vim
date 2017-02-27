@@ -38,4 +38,5 @@ Plugin 'leshill/vim-json'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimfiler.vim'
 Plugin 'Shougo/vimproc.vim'
+Plugin 'easymotion/vim-easymotion'
 call vundle#end()
