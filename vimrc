@@ -157,14 +157,6 @@ nnoremap <C-H> <C-W><C-H>
 "nmap <Leader>wj <C-w>j
 "nmap <Leader>wk <C-w>k
 
-" Git stuff
-nmap <Leader>gs :Gstatus<CR>
-"nmap <Leader>gg :copen<CR>:GGrep
-nmap <Leader>gd :Gdiff<CR>
-nmap <Leader>gb :Gblame<CR>
-nmap <Leader>ga :Git add %<CR>
-nmap <Leader>gc :Gcommit<CR>
-
 " Ctrl-P hotkey
 "nnoremap <silent> <Leader><space> :Unite -start-insert file buffer<CR>
 call unite#filters#matcher_default#use(['matcher_fuzzy'])

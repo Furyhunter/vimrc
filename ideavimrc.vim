@@ -62,10 +62,3 @@ nnoremap ,sco :action Scala.GenerateCompanionObject<CR>
 nnoremap ,oi :action OptimizeImports<CR>
 nnoremap ,qi :action QuickImplementations<CR>
 nnoremap ,qd :action QuickJavaDoc<CR>
-
-" IDEA Git bindings
-nnoremap ,ga :action Git.Add<CR>
-nnoremap ,gc :action ChangesView.Commit<CR>
-nnoremap ,gb :action Git.Branches<CR>
-nnoremap ,gd :action Compare.SameVersion<CR>
-nnoremap ,gr :action Vcs.RollbackChangedLines<CR>
